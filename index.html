@@ -1,129 +1,136 @@
 <html>
-<head>
-<style type="text/css">	
-	 body
-            {
-                background-color: black;
-            }
-	
-	* {
-	padding: 900px;
-	margin: 800px;
-	}
-	
+	<head>
+	<style type="text/css">	
+		 body
+				{
+					background-color: black;
+				}
+		
+		* {
+		padding:0px;
+		margin:0px;
+		}
+
+		div#container
+		{
+			width: 900px;
+			height: 800px;
+		}
+		
+		#header{
+		margin: left;
+		width:1368px;
+		font-family:Arial, helvetica, sans-serif;	
+		}
+		
+		ul,ol{
+		list-style:none;
+		}
+
 	div#font{
 			background: #0088B0;
 			color: white;
+		}	div#font{
+			background: #0088B0;
+			color: white;
 		}
-	
-	#header{
-	margin: left;
-	width:1368px;
-    	font-family:Arial, helvetica, sans-serif;	
-	}
-	
-	ul,ol{
-	list-style:none;
-	}
-	
-	.nav li a {
-	background-color:#0088B0;
-	color:white;
-	text-decoration:none;
-	padding:10px 15px;
-	display:block;
-	}
-	
-	.nav li a:hover{
-	background-color: #434343;
-	}
-	
-	.nav > li {
-	float:left;
-	}
-	
-	.nav li ul {
-	display:none;
-	position:absolute;
-	min-width:150px;
-	}
-	
-	.nav li:hover > ul{
-	display:block;
-	}
-	
-	.nav li ul li {
-	position:relative;
-	}
-	
-	.nav li ul li ul {
-	right:-140px;
-	top:0px;
-	}	
-	
-	@keyframes slidy {
-        0% { left: 0%; }
-        20% { left: 0%; }
-        25% { left: -100%; }
-        45% { left: -100%; }
-        50% { left: -200%; }
-        70% { left: -200%; }
-        75% { left: -300%; }
-        95% { left: -300%; }
-        100% { left: -400%; }
-        }
-
-        body { margin: 0; padding: 0; } 
-        div#slider { overflow: hidden; }
-        div#slider figure img {width: 20%; float: left; }
-        div#slider figure { 
-        position: relative;
-        width: 5000%;
-        margin: 0;
-        left: 0;
-        text-align: left;
-        font-size: 0;
-        animation: 30s 
-        slidy infinite; 
-        }
-	</style>
-	
-	<script>
-		function hora()
-		{
-			var mihora= new Date();
-			var horas = mihora.getHours().toString();
-			var minutos = mihora.getMinutes().toString();
-			if(minutos.lenght == 1)
-			   {
-				   minutos="0"+minutos;
-			   }
-			var segundos = mihora.getSeconds().toString();
-			if(minutos.lenght == 1)
-			   {
-				   segundos="0"+segundos;
-			   }
-			document.forms[0].mireloj.value = horas+":"+minutos+":"+segundos;
+		
+		.nav li a {
+		background-color:#0088B0;
+		color:white;
+		text-decoration:none;
+		padding:10px 15px;
+		display:block;
 		}
-	</script>
-	
-</head>
-<body>
-	<script>
-		var r = setInterval("hora()");
-	</script>
-<div id="header">
-<div id="font" color="Whithe">
-<h1>DuNet.Bet</h1></div>
-<ul class="nav">
-<li><img src="https://image.flaticon.com/icons/svg/53/53246.svg" height="100px"></li>
-<li><a href="">INICIAR SESIÓN</a></li>	
-<li><a href="">REGISTRARSE</a></li>
-<li><a href="https://edgarlemus.github.io/Acerca.html">ACERCA DE...</a></li>
-<li><a href=""><p><form><input type"text" name="mireloj" onclick="hora"></form></p></a></li>
-<li><div><img src="https://edgarlemus.github.io/continuidad2.jpg" height="40px" width="630"></div></li>	
-</ul>
-</div>
+		
+		.nav li a:hover{
+		background-color: #434343;
+		}
+		
+		.nav > li {
+		float:left;
+		}
+		
+		.nav li ul {
+		display:none;
+		position:absolute;
+		min-width:150px;
+		}
+		
+		.nav li:hover > ul{
+		display:block;
+		}
+		
+		.nav li ul li {
+		position:relative;
+		}
+		
+		.nav li ul li ul {
+		right:-140px;
+		top:0px;
+		}	
+		
+		@keyframes slidy {
+		0% { left: 0%; }
+		20% { left: 0%; }
+		25% { left: -100%; }
+		45% { left: -100%; }
+		50% { left: -200%; }
+		70% { left: -200%; }
+		75% { left: -300%; }
+		95% { left: -300%; }
+		100% { left: -400%; }
+		}
+		body { margin: 0; padding: 0; } 
+		div#slider { overflow: hidden; }
+		div#slider figure img {width: 20%; float: left; }
+		div#slider figure { 
+		  position: relative;
+		  width: 4500px;
+		  margin: 0;
+		  left: 0;
+		  text-align: left;
+		  font-size: 0;
+		  animation: 60ss 
+		  slidy infinite; 
+		}
+		</style>
+		
+		<script>
+			function hora()
+			{
+				var mihora= new Date();
+				var horas = mihora.getHours().toString();
+				var minutos = mihora.getMinutes().toString();
+				if(minutos.lenght == 1)
+				   {
+					   minutos="0"+minutos;
+				   }
+				var segundos = mihora.getSeconds().toString();
+				if(minutos.lenght == 1)
+				   {
+					   segundos="0"+segundos;
+				   }
+				document.forms[0].mireloj.value = horas+":"+minutos+":"+segundos;
+			}
+		</script>
+		
+	</head>
+	<body>
+		<script>
+			var r = setInterval("hora()");
+		</script>
+    <div id="header">
+	<div id="font" color="Whithe"><h1>DuNet.Bet</h1></div>
+	<ul class="nav">
+	<li><img src="https://image.flaticon.com/icons/svg/53/53246.svg" height="100px"></li>	
+	<li><a href="">INICIAR SESIÓN</a></li>	
+	<li><a href="">REGISTRARSE</a></li>
+	<li><a href="https://edgarlemus.github.io/Acerca.html">ACERCA DE...</a></li>
+	<li><a href=""><p><form><input type"text" name="mireloj" onclick="hora"></form></p></a></li>
+	<li><div><img src="https://edgarlemus.github.io/continuidad2.jpg" height="40px" width="630"></div></li>	
+	</ul>
+	</div>
 	<br>
 	<br>
 	<br>
@@ -131,17 +138,17 @@
 	<br>
 	<br>
 	<center>
-	<div id="container">
-		<div id="slider">
-		<figure>
-		<img src="http://www.fullmatchesandshows.com/wp-content/uploads/2017/02/uefa-champions-league.png" alt>
-		<img src="https://3.bp.blogspot.com/-KJ3viiTWZzM/V7-4p0g2rTI/AAAAAAAABXQ/W3p3cTBWV5wLwqEpEs8mnenDtg_yWc5LgCLcB/s1600/Group%2BStage%2BDraw%2BFor%2BChampions%2BLeague.jpg" alt>
-		<img src="https://leaguelane.com/wp-content/uploads/2017/09/Shakhtar-Donetsk-vs-Napoli-Champions-League-Predictions-12th-Sep-2017.jpg" alt>
-		<img src="https://leaguelane.com/wp-content/uploads/2017/09/RB-Leipzig-vs-Monaco-Champions-League-Predictions-12th-Sep-2017.jpg" alt>
-		<img src="http://www.estrelladigital.es/media/estrelladigital/images/2017/09/12/2017091219271024532.jpg" alt>
-		</figure>
-		</div>
+	<div id="container">	
+	<div id="slider">
+	<figure>
+	<img src="http://www.futbolypoker.com/wp-content/uploads/2016/09/barsa-madrid-atletico.jpg" alt>
+	<img src="https://3.bp.blogspot.com/-KJ3viiTWZzM/V7-4p0g2rTI/AAAAAAAABXQ/W3p3cTBWV5wLwqEpEs8mnenDtg_yWc5LgCLcB/s1600/Group%2BStage%2BDraw%2BFor%2BChampions%2BLeague.jpg" alt>
+	<img src="http://www.futbolypoker.com/wp-content/uploads/2016/09/borussia-madrid-16.jpg" alt>
+	<img src="https://cdn.vox-cdn.com/thumbor/oLOKF3Wvp6DNpCs7K2Aa_NggYmw=/0x0:1920x1280/1200x675/filters:focal(700x388:1006x694)/cdn.vox-cdn.com/uploads/chorus_image/image/56382327/003_Floyd_Mayweather_vs_Conor_McGregor.0.jpg" alt>
+	<img src="http://cdn.craziestsportsfights.com/wp-content/uploads/2015/10/ufc-ultimate-fighting-championship-logo-wallpaper-background.jpg" alt>
+	</figure>
+	</div>
 	</div>
 	</center>
-</body>
-</html>
+	</body>
+	</html>
