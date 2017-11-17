@@ -16,3 +16,24 @@ function hora()
 }
 
 var r = setInterval("hora()");
+
+$(function() {
+    $.ajax({
+      url: '//connect.facebook.net/es_ES/all.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        FB.init({
+          appId: '335324360274138',
+          xfbml: true
+        });
+        FB.Event.subscribe('auth.authResponseChange', function(response) {
+          if (response && response.status == 'connected') {
+            FB.api('/me', function(response) {
+              alert('Nombre: ' + data.name);
+            });
+          }
+        });
+      }
+    });
+  });
