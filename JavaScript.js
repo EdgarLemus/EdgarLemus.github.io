@@ -16,4 +16,3 @@ function hora()
 }
 
 var r = setInterval("hora()");
-
