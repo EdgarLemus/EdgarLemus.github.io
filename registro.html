@@ -1,0 +1,127 @@
+<html>
+  <head>
+  <meta charset = "UTF-8" />
+    <title></title>
+    <style>
+
+body{
+        font-family: Verdana;
+		font-size: 120%;
+		padding: 4em 4em 4em 4em;
+}
+
+div{
+	margin: 7px;
+}
+
+.label{
+	display:inline-block;
+	width: 150px;
+}
+
+nolabel {
+	display: block;
+}
+
+</style>
+
+<script>
+	// Declarar un objeto
+
+	function salvarCampos(){
+		var usuario = {};
+		usuario.nombre = document.getElementById( "nombre" ).value ;
+		usuario.usuario = document.getElementById( "email" ).value ;
+		usuario.clave = document.getElementById( "clave" ).value ;
+
+		return usuario;
+
+
+	}
+
+	function registrar(){
+    if (verificarDatos()){
+      console.log("el usuario ya existe");
+      alert("el usuario ya existe")
+    }
+    else{
+		var usuario = salvarCampos();
+		var serializado = "";
+		// Serializar el objeto como una cadena de texto JSON
+		serializado = JSON.stringify( usuario );
+		window.alert( serializado );
+    var request = new XMLHttpRequest();
+    var url = "/register";
+    request.open("POST",url,false);
+    request.send(serializado);
+    console.log("Registrado correctamente");
+     }
+    }
+
+
+  function cargarDatos() {
+  var xmlhttp = new XMLHttpRequest();
+  // Direccion donde se van a enviar los datos
+  var url = "/register";
+  // Inicia la conexión
+  xmlhttp.open("GET", url, false);
+  xmlhttp.send();
+  var res = xml.responseText;
+  console.log(res);
+  return JSON.parse(res);
+}
+
+function verificarDatos() {
+  var dato = cargarDatos();
+  console.log(dato);
+  var registro = salvarCampos();
+  var encontrado = false;
+  for (var i = 0; i < dato.length; i++){
+    var nombre = dato[i].usuario;
+    console.log(nombre);
+    if (nombre == registro.usuario) {
+      encontrado = true;
+    }
+  }
+  return encontrado;
+}
+</script>
+
+  </head>
+  <body >
+    <h1>Registrese</h1>
+
+  <form action="#" >
+
+    <p>
+    <label>
+      Ingrese su Nombre
+    </label>
+      <input type="text" id="nombre" placeholder="Nombre">
+	</p>
+	<p>
+    <label>
+      Ingrese su Email
+    </label>
+      <input type="text" id="email" placeholder="example@gmail.com">
+
+	</p>
+	<p>
+	  <label>
+      Escriba una contraseña
+    </label>
+      <input type="password" id="clave" placeholder="Contraseña">
+
+	</p>
+	<p>
+	  <label>
+      Confirme su contraseña
+    </label>
+      <input type="password" id="verifica" placeholder="Confirmar contraseña">
+  </p>
+</form>
+
+	<button id="guardar" onclick="registrar()"  >Registrar</button>
+
+  </body>
+</html>
