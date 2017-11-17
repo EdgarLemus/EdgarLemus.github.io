@@ -1,0 +1,138 @@
+body
+				{
+					background-color: white;
+				}
+		
+		* {
+		padding:0px;
+		margin:0px;
+		}
+		div#container
+		{
+			width: 900px;
+			height: 800px;
+		}
+		
+		#header{
+		margin: left;
+		width:1368px;
+		font-family:Arial, helvetica, sans-serif;	
+		}
+		
+		ul,ol{
+		list-style:none;
+		}
+	div#font{
+			background: #0088B0;
+			color: white;
+		}	
+		
+		.nav li a {
+		background-color:#0088B0;
+		color:white;
+		text-decoration:none;
+		padding:10px 15px;
+		display:block;
+		}
+		
+		.nav li a:hover{
+		background-color: #434343;
+		}
+
+		#contenedor{
+			background: black;
+		}
+		
+		.nav > li {
+		float:left;
+		}
+		
+		.nav li ul {
+		display:none;
+		position:absolute;
+		min-width:150px;
+		}
+		
+		.nav li:hover > ul{
+		display:block;
+		}
+		
+		.nav li ul li {
+		position:relative;
+		}
+		
+		.nav li ul li ul {
+		right:-140px;
+		top:0px;
+		}	
+		
+		@keyframes slidy {
+		0% { left: 0%; }
+		20% { left: 0%; }
+		25% { left: -100%; }
+		45% { left: -100%; }
+		50% { left: -200%; }
+		70% { left: -200%; }
+		75% { left: -300%; }
+		95% { left: -300%; }
+		100% { left: -400%; }
+		}
+		body { margin: 0; padding: 0; } 
+		div#slider { overflow: hidden; }
+		div#slider figure img {width: 20%; float: left; }
+		div#slider figure { 
+		  position: relative;
+		  width: 4500px;
+		  margin: 0;
+		  left: 0;
+		  text-align: left;
+		  font-size: 0;
+		  animation: 30s 
+		  slidy infinite; 
+        }
+        
+        .modal-contenido{
+			background-color:#0088B0;
+			width:300px;
+			padding: 10px 20px;
+			margin: 20% auto;
+			position: relative;
+		  }
+		  .modal{
+			background-color: rgba(0,0,0,.8);
+			position:fixed;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			opacity:0;
+			pointer-events:none;
+			transition: all 1s;
+		  }
+		  #miModal:target{
+			opacity:1;
+			pointer-events:auto;
+		  }
+
+		  .modal-contenido2{
+			background-color:#0088B0;
+			width:300px;
+			padding: 10px 20px;
+			margin: 20% auto;
+			position: relative;
+		  }
+		  .modal2{
+			background-color: rgba(0,0,0,.8);
+			position:fixed;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			opacity:0;
+			pointer-events:none;
+			transition: all 1s;
+		  }
+		  #miModal2:target{
+			opacity:1;
+			pointer-events:auto;
+		  }
