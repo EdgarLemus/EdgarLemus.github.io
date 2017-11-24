@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<fieldset>
+        <legend>Barcelona vs Real</legend>
+        <label>
+            <input type="radio" name="1" value="ganaLocal"> ganaBarcelona1.5
+        </label>
+        <label>
+            <input type="radio" name="1" value="empate">Empate
+        </label>
+        <label>
+            <input type="radio" name="1" value="ganaVisitante"> ganaReal2.5
+        </label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Bayern vs Dortmunt</legend>
+        <label>
+            <input type="radio" name="2" value="ganaLocal"> ganaBayern1.13
+        </label>
+        <label>
+            <input type="radio" name="2" value="empate">Empate
+        </label>
+        <label>
+            <input type="radio" name="2" value="ganaVisitante">ganaDortmunt3.5
+        </label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Inter vs Milan</legend>
+        <label>
+            <input type="radio" name="3" value="ganaLocal">ganaInter2.33
+        </label>
+        <label>
+            <input type="radio" name="3" value="empate">Empate
+        </label>
+        <label>
+            <input type="radio" name="3" value="ganaVisitante"> ganaMilan2.54
+        </label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Chelsea vs Leicester</legend>
+        <label>
+            <input type="radio" name="4" value="ganaLocal">ganaChelsea1.7
+        </label>
+        <label>
+            <input type="radio" name="4" value="empate">Empate
+        </label>
+        <label>
+            <input type="radio" name="4" value="ganaVisitante"> ganaLeicester2.6 
+        </label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>PSG vs Monaco</legend>
+        <label>
+            <input type="radio" name="5" value="ganaLocal">ganaPSG1.03
+        </label>
+        <label>
+            <input type="radio" name="5" value="empate">Empate
+        </label>
+        <label>
+            <input type="radio" name="5" value="ganaVisitante">ganaMonaco5.6
+        </label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Ajax vs Feyenord</legend>
+        <label>
+            <input type="radio" name="6" value="ganaLocal">ganaAjax1.12 
+        </label>
+        <label>
+            <input type="radio" name="6" value="empate">Empate
+        </label>
+        <label>
+            <input type="radio" name="6" value="ganaVisitante"> ganaFeyenord8.2
+        </label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Manchester City vs Manchester United</legend>
+        <label>
+            <input type="radio" name="7" value="ganaLocal"> ganaManCity2.44
+        </label>
+        <label>
+            <input type="radio" name="7" value="empate">Empate
+        </label>
+        <label>
+            <input type="radio" name="7" value="ganaVisitante">ganaManUnited2.8
+        </label>
+    </fieldset>
+    
+    <input type="Reset" value="Borrar formulario">
+    
+<input type="text" name="apuesta" placeholder="Monto de apuesta" >
+    
+<button onclick="funcionApostar">Apostar</button>
+
+<script>
+function funcionApostar() {
+    //1. Encontrar el elemento que necesito
+		var caja = document.getElementById("apuesta");
+		//2. Usar la propiedad que necesito
+		if(caja.value >= 1000){
+		alert('Seguro que quieres hacer la apuesta de '+caja.value+'pesos ?');
+		}
+        var valorTotalAApostar = ((document.getElementById("1").getValue+document.getElementById("2").getValue+document.getElementById("3").getValue+document.getElementById("4").getValue+document.getElementById("5").getValue+document.getElementById("6").getValue+document.getElementById("7").getValue+document.getElementById("8").getValue)*caja.value);
+        alert('El valor a apostar es de'+valorTotalAApostar);
+		if(caja.value <1000){
+	    }alert('El monto mínimo es de 1000 pesos');
+}
+</script>
+</body>
+</html>
