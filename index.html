@@ -7,6 +7,25 @@
 
 	<script type="text/javascript" src="JavaScript.js"></script>
 
+
+	<script type="text/javascript">
+		/*Esta funcion permite desplegar las opciones de las apuestas */
+		function desplegar(tabla_a_desplegar, estadoT) {
+			var tablA = document.getElementById(tabla_a_desplegar);
+			var estadOt = document.getElementById(estadoT);
+
+			switch (tablA.style.display) {
+				case "none":
+					tablA.style.display = "block";
+					estadOt.innerHTML = "Ocultar coneNido"
+					break;
+				default:
+					tablA.style.display = "none";
+					estadOt.innerHTML = "Mostrar coNteNido"
+					break;
+			}
+		} 
+	</script>
 </head>
 
 <body>
@@ -31,6 +50,9 @@
 				<a href="#miModal">Sign Up</a>
 			</li>
 			<li>
+				<a href="#miModal3">Apuestas</a>
+			</li>
+			<li>
 				<a href="https://edgarlemus.github.io/Acerca.html">ACERCA DE...</a>
 			</li>
 			<li>
@@ -44,7 +66,7 @@
 			</li>
 			<li>
 				<div>
-					<img src="https://edgarlemus.github.io/continuidad2.jpg" height="40px" width="565">
+					<img src="https://edgarlemus.github.io/continuidad2.jpg" height="40px" width="577">
 				</div>
 			</li>
 		</ul>
@@ -121,9 +143,11 @@
 					</center>
 				</div>
 				<div id="demo">Si tienes cuenta de Facebook ingresa con ella</div>
-				<button onclick="info()">Login whit Facebook</button>					
+				<button onclick="info()">Login whit Facebook</button>
 			</div>
 		</div>
+
+
 
 		<div id="miModal2" class="modal2">
 			<div class="modal-contenido2">
@@ -153,9 +177,284 @@
 					</center>
 				</div>
 				<div id="demo">Si tienes cuenta de Facebook ingresa con ella</div>
-				<button onclick="login()">Login whit Facebook</button>	
+				<button onclick="login()">Login whit Facebook</button>
 			</div>
 		</div>
+
+		<div id="miModal3" class="modal3">
+			<div class="modal-contenido3">
+				<a href="#">Close...</a>
+				<br>
+				<center>
+					<h1>DUNET.BET #APUESTA</h1>
+				</center>
+				<br>
+				<div>
+					<table border="0" width="0">
+						<tr>
+							<td>Barcelona FC vs Real Madrid</td>
+							<td onClick="desplegar('tabla_a_desplegar','estadoT')">[+]</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="1" id="tabla_a_desplegar" style="display: none;">
+									<tr>
+										<td>
+											<fieldset>
+												<from name="formu1">
+													<label>
+														<input id="1.1" type="radio" name="d1" value="ganaLocal">
+														<label id="1" value="Barcelona"> Barcelona </label>
+														<label id="1.1.1">1.5</label>
+													</label>
+													<label>
+														<input id="1.2" type="radio" name="d1" value="empate">
+														<label id="2" value="Empate"> Empate </label>
+														<label id="1.2.2">3.5</label>
+													</label>
+													<label>
+														<input id="1.3" type="radio" name="d1" value="ganaVisitante">
+														<label id="3" value="Real Madrid"> Real </label>
+														<label id="1.3.3">2.5</label>
+													</label>
+												</from>
+											</fieldset>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+
+					<table border="0" width="0">
+						<tr>
+							<td>Bayern vs Dortmunt</td>
+							<td onClick="desplegar('tabla_a_desplegar2','estadoT2')">[+]</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="1" id="tabla_a_desplegar2" style="display: none;">
+									<tr>
+										<td>
+											<fieldset>
+												<from name="formu2">
+													<label>
+														<input id="2.1" type="radio" name="d2" value="ganaLocal">
+														<label id="4" value="Bayern"> Bayern</label>
+														<label id="2.1.1" value="1.13"> 1.13</label>
+													</label>
+													<label>
+														<input id="2.2" type="radio" name="d2" value="empate">
+														<label id="5" value="Empate"> Empate</label>
+														<label id="2.2.2" value="7.8"> 7.8</label>
+													</label>
+													<label>
+														<input id="2.3" type="radio" name="d2" value="ganaVisitante">
+														<label id="6" value="Dortmunt"> Dortmunt </label>
+														<label id="2.3.3" value="3.5">3.5</label>
+													</label>
+												</from>
+											</fieldset>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+
+					<table table border="0" width="0">
+						<tr>
+							<td>Inter vs Milan</td>
+							<td onClick="desplegar('tabla_a_desplegar3','estadoT3')">[+]</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="1" id="tabla_a_desplegar3" style="display: none;">
+									<tr>
+										<td>
+											<fieldset>
+												<from name="formu3">
+													<label>
+														<input id="3.1" type="radio" name="d3" value="ganaLocal">
+														<label id="7" value="Inter"> Inter</label>
+														<label id="3.1.1" value="2.33"> 2.33</label>
+													</label>
+													<label>
+														<input id="3.2" type="radio" name="d3" value="empate">
+														<label id="8" value="Empate"> Empate</label>
+														<label id="3.2.2"> 5.7</label>
+													</label>
+													<label>
+														<input id="3.3" type="radio" name="d3" value="ganaVisitante">
+														<label id="9" value="Milan"> Milan</label>
+														<label id="3.3.3"> 2.54</label>
+													</label>
+												</from>
+											</fieldset>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+
+					<table table border="0" width="0">
+						<tr>
+							<td>Chelsea vs Leicester</td>
+							<td onClick="desplegar('tabla_a_desplegar4','estadoT4')">[+]</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="1" id="tabla_a_desplegar4" style="display: none;">
+									<tr>
+										<td>
+											<fieldset>
+												<from name="formu4">
+													<label>
+														<input id="4.1" type="radio" name="d4" value="ganaLocal">
+														<label id="10" value="Chelsea"> Chelsea</label>
+														<label id="4.1.1"> 1.7</label>
+													</label>
+													<label>
+														<input id="4.2" type="radio" name="d4" value="empate">
+														<label id="11" value="Empate"> Empate</label>
+														<label id="4.2.2"> 7.4</label>
+													</label>
+													<label>
+														<input id="4.3" type="radio" name="d4" value="ganaVisitante">
+														<label id="12" value="Leicester"> Leicester</label>
+														<label id="4.3.3"> 2.6</label>
+													</label>
+												</from>
+											</fieldset>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+
+					<table table border="0" width="0">
+						<tr>
+							<td>PSG vs Monaco</td>
+							<td onClick="desplegar('tabla_a_desplegar5','estadoT5')">[+]</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="1" id="tabla_a_desplegar5" style="display: none;">
+									<tr>
+										<td>
+											<fieldset>
+												<from name="formu5">
+													<label>
+														<input id="5.1" type="radio" name="d5" value="ganaLocal">
+														<label id="13" value="PSG"> PSG</label>
+														<label id="5.1.1"> 1.03</label>
+													</label>
+													<label>
+														<input id="5.2" type="radio" name="d5" value="empate">
+														<label id="14" value="Empate"> Empate</label>
+														<label id="5.2.2"> 16.3</label>
+													</label>
+													<label>
+														<input id="5.3" type="radio" name="d5" value="ganaVisitante">
+														<label id="15" value="Monaco"> Monaco</label>
+														<label id="5.3.3"> 5.6</label>
+													</label>
+												</from>
+											</fieldset>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+
+					<table table border="0" width="0">
+						<tr>
+							<td>Ajax vs Feyenord</td>
+							<td onClick="desplegar('tabla_a_desplegar6','estadoT6')">[+]</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="1" id="tabla_a_desplegar6" style="display: none;">
+									<tr>
+										<td>
+											<fieldset>
+												<legend>Ajax vs Feyenord</legend>
+												<from name="formu6">
+													<label>
+														<input id="6.1" type="radio" name="d6" value="ganaLocal">
+														<label id="16" value="Ajax"> Ajax</label>
+														<label id="6.1.1"> 1.12 </label>
+													</label>
+													<label>
+														<input id="6.2" type="radio" name="d6" value="empate">
+														<label id="17" value="Empate"> Empate</label>
+														<label id="6.2.2"> 8.7</label>
+													</label>
+													<label>
+														<input id="6.3" type="radio" name="d6" value="ganaVisitante">
+														<label id="18" value="Feyernord"> Feyenord</label>
+														<label id="6.3.3"> 8.2</label>
+													</label>
+												</from>
+											</fieldset>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+
+					<table table border="0" width="0">
+						<tr>
+							<td>Manchester City vs Manchester United</td>
+							<td onClick="desplegar('tabla_a_desplegar7','estadoT7')">[+]</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="1" id="tabla_a_desplegar7" style="display: none;">
+									<tr>
+										<td>
+											<fieldset>
+												<from name="formu7">
+													<label>
+														<input id="7.1" type="radio" name="d7" value="ganaLocal">
+														<label id="19" value="Mancit"> ManCit</label>
+														<label id="7.1.1"> 2.4</label>
+													</label>
+													<label>
+														<input id="7.2" type="radio" name="d7" value="empate">
+														<label id="20" value="Empate"> Empate</label>
+														<label id="7.2.2"> 4.5</label>
+													</label>
+													<label>
+														<input id="7.3" type="radio" name="d7" value="ganaVisitante">
+														<label id="21" value="ManUnited"> ManUnited</label>
+														<label id="7.3.3"> 2.8</label>
+													</label>
+												</from>
+											</fieldset>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					
+					<div>
+							<label>Ingresos: </label><input id="ingresos" type="text" placeholder="0" required>
+					</div>
+					
+					<button onclick="ganancia()">Apostar</button>
+					<button onclick="verApuesta()">Ver Apuesta</button>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
 </body>
 
 </html>

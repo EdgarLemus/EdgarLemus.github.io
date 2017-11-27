@@ -14,197 +14,123 @@ function hora() {
 
 var r = setInterval("hora()");
 
-window.fbAsyncInit = function () {
-    FB.init({
-        appId: '335324360274138',
-        cookie: true,
-        xfbml: true,
-        version: 'v2.11'
-    });
-    FB.getLoginStatus(function (response) {
-        if (response.status === 'connected') {
-            document.getElementById().innerHTML = 'Okay you are connected';
-        } else if (response.status === 'not_authorized') {
-            document.getElementById().innerHTML = 'You are not connected';
-        } else {
-            document.getElementById().innerHTML = 'Okay you are logged in to any facebook account';
-        }
-    });
-    FB.AppEvents.logPageView();
-}
+var lista = [""];
+var valores = 1;
+function apuesta() {
+    if (document.getElementById(1.1).checked) {
+        lista.push("Barcelona");
+        valores = valores * 1.5;
 
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+    }
+    if (document.getElementById(1.2).checked) {
+        lista.push("Empate");
+        valores = valores * 3.5;
+    }
+    if (document.getElementById(1.3).checked) {
+        lista.push("Real Madrid");
+        valores = valores * 2.5;
+    }
+    if (document.getElementById(2.1).checked) {
+        lista.push("Bayern");
+        valores = valores * 1.13;
+    }
+    if (document.getElementById(2.2).checked) {
+        lista.push("Empate");
+        valores = valores * 7.8;
 
-function login() {
-    FB.login(function (response) {
-        if (response.status === 'connected') {
-            document.getElementById('demo').innerHTML = 'Okay you are connected';
-        } else if (response.status === 'not_authorized') {
-            document.getElementById('demo').innerHTML = 'You are not connected';
-        } else {
-            document.getElementById('demo').innerHTML = 'Okay you are logged in to any facebook account';
-        }
-    })
-}
-
-function info() {
-    FB.api('/me', 'GET', { fileds: 'first_name,last_name_name_id' }, function (response) {
-        document.getElementById('firstR').innerHTML = response.first_name;
-        document.getElementById('lastR').innerHTML = response.last_name;
-        document.getElementById('emailR').innerHTML = response.email;
-    });
-}
-
-function easerLogin() {
-    document.getElementById('emailL').innerHTML = '';
-    document.getElementById('passwordL').innerHTML = '';
-}
-
-function easerSignup() {
-    document.getElementById('emailR').innerHTML = '';
-    document.getElementById('passwordR').innerHTML = '';
-    document.getElementById('passwordRR').innerHTML = '';
-    document.getElementById('firstR').innerHTML = '';
-    document.getElementById('lastR').innerHTML = '';
-    document.getElementById('documents').innerHTML = '';
-    document.getElementById('birthdate').innerHTML = '';
-}
-
-function save() {
-
-    if(equalPassword() === true)
-    {
-    var usuario = {};
-    usuario.first_name = document.getElementById('firstR').value;
-    usuario.last_name = document.getElementById('lastR').value;
-    usuario.password = document.getElementById('passwordR').value;
-    usuario.email = document.getElementById('emailR').value;
-    usuario.documents = document.getElementById('documents').value;
-    usuario.birthdate = document.getElementById('birthdate').value;
-    return usuario;
-    easerSignup();
+    }
+    if (document.getElementById(2.3).checked) {
+        lista.push("Dortmunt");
+        valores = valores * 3.5;
+    }
+    if (document.getElementById(3.1).checked) {
+        lista.push("Inter");
+        valores = valores * 2.33;
+    }
+    if (document.getElementById(3.2).checked) {
+        lista.push("Empate");
+        valores = valores * 5.7;
+    }
+    if (document.getElementById(3.3).checked) {
+        lista.push("Milan");
+        valores = valores * 2.54;
+    }
+    if (document.getElementById(4.1).checked) {
+        lista.push("Chelsea");
+        valores = valores * 1.7;
+    }
+    if (document.getElementById(4.2).checked) {
+        lista.push("Empate");
+        valores = valores * 7.4;
+    }
+    if (document.getElementById(4.3).checked) {
+        lista.push("Leicester");
+        valores = valores * 2.6;
+    }
+    if (document.getElementById(5.1).checked) {
+        lista.push("PSG");
+        valores = valores * 1.03;
+    }
+    if (document.getElementById(5.2).checked) {
+        lista.push("Empate");
+        valores = valores * 16.3;
+    }
+    if (document.getElementById(5.3).checked) {
+        lista.push("Monaco");
+        valores = valores * 5.6;
+    }
+    if (document.getElementById(6.1).checked) {
+        lista.push("Ajax");
+        valores = valores * 1.12;
+    }
+    if (document.getElementById(6.2).checked) {
+        lista.push("Empate");
+        valores = valores * 8.7;
+    }
+    if (document.getElementById(6.3).checked) {
+        lista.push("Feyenord");
+        valores = valores * 8.2;
+    }
+    if (document.getElementById(7.1).checked) {
+        lista.push("Manchester City");
+        valores = valores * 2.4;
+    }
+    if (document.getElementById(7.2).checked) {
+        lista.push("Empate");
+        valores = valores * 4.5;
+    }
+    if (document.getElementById(7.3).checked) {
+        lista.push("Manchester United");
+        valores = valores * 2.8;
     }
 }
 
-function equalPassword()
+
+function ganancia() {
+    apuesta();
+    var ingresos = document.getElementById('ingresos').value;
+    if (ingresos >= 1000) {
+        
+        var cambio = "";
+        var x = ingresos * valores;
+        cambio = valores.toString();
+        cambio = x.toString();
+        myFunction(valores.toString(), cambio);
+        document.getElementById("ingresos").innerHTML = "";
+        valores = 1;
+        ingresos = 0;
+    } else {
+        alert("Ingrese una cantidad mayor a $1000");
+    }
+}
+
+function myFunction(CUOTA, gana) {
+    if (confirm("Desea realizar la apuesta con una cuota de " + CUOTA + " y ganancia de "+ gana +"?") == true) {
+        alert("Apuesta Realizada");
+    }
+}
+
+function verApuesta()
 {
-    var val = false;
-    var pass = document.getElementById('passwordR').value;
-    var passR = document.getElementById('passwordRR').value;
-    if(pass === passR)
-    {
-        val = true;
-    }
-
-    return val;
-}
-
-function registrerUser() {
-    if (data()) {
-        console.log("User already exists");
-        alert("User already exists")
-
-    }
-    else {
-        var user = save();
-        var serializado = "";
-        serializado = JSON.stringify(user);
-        window.alert(serializado);
-        var request = new XMLHttpRequest();        
-        request.open("POST", "/registro", false);
-        request.send(serializado);
-        console.log("Complete Record");
-    }
-}
-
-function loadData() {
-    var xml = new XMLHttpRequest();
-    xml.open("GET", "/usuarios", false);
-    xml.send();
-    var res = xml.responseText;
-    console.log(res);
-    return JSON.parse(res);
-}
-
-function data() {
-    var dato = loadData();
-    console.log(dato);
-    var loginn = save();
-    var found = false;
-    for (var i = 0; i < dato.length; i++) {
-        var nombre = dato[i].user;
-        console.log(nombre);
-        if (nombre == loginn.user) {
-            found = true;
-        }
-    }
-    return found;
-}
-
-function saveField(){
-    var usuario = {};
-    usuario.usuario = document.getElementById( "email" ).value ;
-    usuario.clave = document.getElementById( "clave" ).value ;
-    return usuario;
-}
-
-function signIn(){
-    if (checkData()){
-        easerLogin();
-      console.log("Welcome");
-      alert("Welcome")
-    }
-    else{
-		var usuario=saveField();
-
-		var serializado = "";
-		serializado = JSON.stringify( usuario );
-		window.alert( serializado );
-
-		var xmlhttp = new XMLHttpRequest();
-		var url = "/login";
-		xmlhttp.onreadystatechange = function() {
-			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-			alert("Welcome");
-			}
-			if (xmlhttp.readyState == 4 && xmlhttp.status != 200) {
-			alert("Email and Password Faill");
-			}
-		};
-		xmlhttp.open("POST", url, true);
-		xmlhttp.send(serializado);
-
-    }
-    
-    function cargarDatos() {
-        var xmlhttp = new XMLHttpRequest();
-        var url = "/login";
-        xmlhttp.open("GET", url, false);
-        xmlhttp.send();
-        var res = xml.responseText;
-        console.log(res);
-        return JSON.parse(res);
-        }
-
-function checkData() {
-    var dato = cargarDatos();
-    console.log(dato);
-    var logeo = saveField();
-    var encontrado = false;
-    for (var i = 0; i < dato.length; i++){
-      var nombre = dato[i].usuario;
-      var clave = dato[i].clave;
-      console.log(nombre);
-      if (nombre == logeo.usuario && clave == logeo.clave) {
-        encontrado = true;
-      }
-    }
-    return encontrado;
-    }
+    alert("Tu apuesta es: " + lista);
 }
