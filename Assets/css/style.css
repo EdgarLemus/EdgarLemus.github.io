@@ -18,9 +18,7 @@ html {
 }
 body {
   font-family: "Poppins", sans-serif;
-   background-color: rgb(34, 32, 32);
-   
-   
+   background-color: rgb(32, 32, 34);
 }
 
 *::selection {
