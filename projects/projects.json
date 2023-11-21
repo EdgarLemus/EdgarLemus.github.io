@@ -1,0 +1,23 @@
+[
+
+  {
+    "name": "Test Automation Selenium/Python",
+    "desc": "Automatización en el sitio web New Tour de los procesos de Registro de Usuario y Reserva de Vuelo, todo implementado utilizando Python y Selenium.",
+    "image": "PythonSelenium",
+     "stacks":"Jira,python,vscode",
+    "links": {
+      "view": "https://github.com/EdgarLemus/Selenium-Python",
+      "code": "https://github.com/EdgarLemus/Selenium-Python"
+    }
+  },
+  {
+    "name": "Api Automation Test Serenity Rest",
+    "desc": "Automatización de las apis de la pagina Rqres todo realizado con Gradle, Java, SerenityBDD, Cucumber y Screenplay.",
+    "image": "Api Automation Test Serenity Rest",
+    "stacks":"java,eclipse,git,restful,SerenityBDD,Cucumber",
+    "links": {
+      "view": "https://github.com/EdgarLemus/Api-Automation-Test-Serenity-Rest",
+      "code": "https://github.com/EdgarLemus/Api-Automation-Test-Serenity-Rest"
+    }
+  }
+]

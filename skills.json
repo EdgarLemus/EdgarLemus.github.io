@@ -1,0 +1,126 @@
+[
+  {
+    "name": "Angular",
+    "icon": "Angular.png"
+  },
+  {
+    "name": "AWS",
+    "icon": "AWS.png"
+  },
+  {
+    "name": "Cucumber",
+    "icon": "Cucumber.png"
+  },
+  {
+    "name": "CSS",
+    "icon": "css.png"
+  },
+  {
+    "name": "Django",
+    "icon": "django.png"
+  },
+  {
+    "name": "Docker",
+    "icon": "Docker.png"
+  },
+  {
+    "name": "Eclipse",
+    "icon": "eclipse.png"
+  },
+  {
+    "name": "Git",
+    "icon": "git.png"
+  },
+  {
+    "name": "Github",
+    "icon": "github.png"
+  },
+  {
+    "name": "Gradle",
+    "icon": "Gradle.png"
+  },
+  {
+    "name": "HTML",
+    "icon": "html.png"
+  },
+  {
+    "name": "IntelliJ",
+    "icon": "intellij.png"
+  },
+  {
+    "name": "Java",
+    "icon": "java.png"
+  },
+  {
+    "name": "JavaScript",
+    "icon": "js.png"
+  },
+  {
+    "name": "JDBC",
+    "icon": "jdbc.png"
+  },
+  {
+    "name": "Jenkins",
+    "icon": "Jenkins.png"
+  },
+  {
+    "name": "Jira",
+    "icon": "Jira.png"
+  },
+  {
+    "name": "Maven",
+    "icon": "maven.png"
+  },
+  {
+    "name": "MongoDB",
+    "icon": "mongoDB.png"
+  },
+  {
+    "name": "MySQL",
+    "icon": "mysql.png"
+  },
+  {
+    "name": "Node Js",
+    "icon": "nodejs.png"
+  },
+  {
+    "name": "Oracle",
+    "icon": "Oracle.png"
+  },
+  {
+    "name": "Php",
+    "icon": "Php.png"
+  },
+  {
+    "name": "Postman",
+    "icon": "postman.png"
+  },
+  {
+    "name": "Python",
+    "icon": "python.png"
+  },
+  {
+    "name": "RESTful - APIs",
+    "icon": "restful.png"
+  },
+  {
+    "name": "Selenium",
+    "icon": "Selenium.png"
+  },
+  {
+    "name": "VS Code",
+    "icon": "vscode.png"
+  },
+  {
+    "name": "Zephyr",
+    "icon": "Zephyr.png"
+  },
+  {
+    "name": "Android Studio",
+    "icon": "Android Studio.png"
+  },
+  {
+    "name": "Git",
+    "icon": "git.png"
+  }
+]

@@ -1,203 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords"
+    content="Shubham Bhati, portfolio, Shubham Bhati, personal portfolio life codes, portfolio design, portfolio website, personal portfolio" />
+  <meta name="description" content="Welcome to Shubham's Portfolio. Java Backend Developer" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./Assets/css/style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Portfolio website complete</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Marlon</a>
-                </div>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
+  <!-- Favicon -->
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
+  <link id='favicon' rel="shortcut icon"
+    href="https://th.bing.com/th/id/R.cda3b7d73ea9d27ebc57e69796622b87?rik=RBze9cBJjorqcA&riu=http%3a%2f%2fwww.icons101.com%2ficon_png%2fsize_512%2fid_32956%2fSb.png&ehk=8RXWPvUn08MryrnrIUwVTerw1MK%2fLsSOn6T2Qy7ED4E%3d&risl=&pid=ImgRaw&r=0"
+    type="image/x-png">
+  <title>Portfolio | Edgar Lemus</title>
+  <script src="https://unpkg.com/eva-icons"></script>
+</head>
 
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hola,<br>Soy <span class="home__title-color">Edgar Duvan Lemus</span><br> QA Automation Sr | <br> Web Developer Jr</h1>
+<body>
 
-                    <a href="#" class="button">Descargar CV</a>
-                </div>
 
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/edgar-duvan-lemus-ramos-731070136/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                </div>
 
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
+  <!-- navbar starts -->
+  <header>
+    <a href="/" class="logo"><i class="fab fa-dev"></i> Edgar Lemus</a>
 
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+    <div id="menu" style="color: white;" class="fas fa-bars"></div>
+    <nav id="nav-menu" class="navbar">
+      <ul>
+        <li><a class="active nav-link home" href="#home">Home</a></li>
+        <li><a class="nav-link about" href="#about">Sobre mi</a></li>
+        <li><a class="nav-link skills" href="#skills">Skills</a></li>
+        <li><a class="nav-link projects" href="#projects">Work</a></li>
+        <li><a class="nav-link contact" href="#contact">Contact</a></li>
+        <li><button id="resume-button-1">
+            <a id="resume-link-1" href="Assets/Shubham_Bhati_Resume.pdf" download
+              onclick="window.open('Assets/Shubham_Bhati_Resume.pdf')" class="btn nav-link resume"><span>Resume </span>
+              <i class="fas fa-chevron-right"></i>
+            </a>
+          </button></li>
+      </ul>
+    </nav>
+  </header>
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Marlon</h2>
-                        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
-                    </div>                                   
-                </div>
-            </section>
 
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
+  <section class="home2" id="home">
 
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
 
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
+    <div class="content">
+      <h2>Hola,<br /> Soy Edgar <span>Lemus</span></h2>
+      <p>Me dedico al <span class="typing-text"></span></p>
+      <a href="#about" class="btn"><span>Sobre mi</span>
+        <i class="fas fa-arrow-circle-down"></i>
+      </a>
+      <div class="socials">
+        <ul class="social-icons">
+          <li><a class="linkedin" aria-label="LinkedIn"
+              href="https://www.linkedin.com/in/edgar-duvan-lemus-ramos-731070136/" target="_blank"><i
+                class="fab fa-linkedin"></i></a></li>
+          <li><a class="github" aria-label="GitHub" href="https://github.com/EdgarLemus" target="_blank"><i
+                class="fab fa-github"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="image">
+      <img draggable="false" class="tilt" id="new23" src="Assets/images/Foto Mia 2.jpg" alt=""
+        style="border-radius: 20%;">
+    </div>
+  </section>
+  <!-- hero section ends -->
 
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
 
-                <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
-                </div>
-            </section>
+  <!-- about section starts -->
+  <section class="about about2 section" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> Sobre <span>Mi</span></h2>
 
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
+    <div class="row">
 
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
-                    </form>
-                </div>
-            </section>
-        </main>
+      <div class="image">
+        <img draggable="false" class="tilt home-img" src="./Assets/images/IMG_2677.png" alt="">
+      </div>
+      <div class="content">
+        <h3 id="user-detail-name">Soy Edgar Lemus <i class="fab fa-black-tie"></i></h3>
+        <span class="tag">QA Automation Sr<i
+            class="fas fa-mobile-altJava Backend DeveloperJava Backend Developer"></i></span>
 
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Marlon</p>
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+        <p id="user-detail-intro">Ingeniero de pruebas apasionado
+          con habilidades para concebir
+          nuevas alternativas y adquirir
+          rápidamente conocimientos en
+          diversas áreas. Destaco por ser
+          responsable, aprender fácilmente y
+          colaborar efectivamente en grupos
+          diversos.
+          Mi enfoque laboral se centra en las
+          Pruebas de Software, tanto manuales
+          como automatizadas, con
+          especialización en validar y verificar
+          software para garantizar su calidad y
+          valor para los usuarios.
+          Además, tengo sólidos conocimientos
+          en gestión de proyectos con
+          metodología SCRUM, y poseo
+          habilidades en bases de datos SQL.
+          Listo para llevar mi experiencia y
+          habilidades versátiles a un nuevo
+          desafío, con el objetivo de impulsar la
+          calidad y éxito en tu equipo.. </p>
+        <div class="resumebtn">
+          <button id="resume-button-2">
+
+            <a id="resume-link-2" href="Assets/Edgar Duvan Lemus Ramos.pdf" download
+              onclick="window.open('Assets/Edgar Duvan Lemus Ramos.pdf')" class="btn"><span>Resume</span>
+              <i class="fas fa-chevron-right"></i>
+            </a>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- about section ends -->
+
+  <!-- skills section starts -->
+  <section class="skills2" id="skills">
+
+    <h2 class="heading"><i class="fas fa-laptop-code"></i>Tech<span> Stack</span></h2>
+
+    <div class="container">
+      <div class="row" id="skillsContainer">
+
+      </div>
+    </div>
+
+  </section>
+  <!-- skills section ends -->
+
+  <section id="gitSection" style="text-align: center;">
+
+    <div id="heading-git">
+
+      <h1 id="ddd">Mi contribución a <span style="color: yellow">GitHub</span><span id="git-image"></span> </h1>
+
+    </div>
+
+
+    <div id="contri">
+
+      <div>
+        <img id="github-streak-stats" alt="7oSkaaa's Github Stats"
+          src="https://github-readme-streak-stats.herokuapp.com/?user=EdgarLemus&count_private=true&show_icons=true&custom_title=Github&theme=algolia&hide_border=true&bg_color=0,000000,130F40&layout=compact&border_radius=10" />
+
+      </div>
+
+
+      <div>
+        <img id="github-stats-card" alt="status github, commits, etc..."
+          src="https://github-readme-stats.vercel.app/api?username=EdgarLemus&show_icons=true&count_private=true&theme=algolia&bg_color=0,000000,130F40&layout=compact&border_radius=10&hide_border=true">
+      </div>
+      <!--  -->
+
+    </div>
+
+    <div id="contri2">
+      <img id="github-top-langs" alt="most used languages"
+        src="https://github-readme-stats.vercel.app/api/top-langs/?username=EdgarLemus&count_private=true&theme=algolia&bg_color=0,000000,130F40&layout=compact&border_radius=8&hide_border=true&langs_count=20&hide=hack,swift,kotlin,objective-c" />
+    </div>
+
+    <!-- <div class="calendar react-activity-calendar tilt" id="calendwer"></div> -->
+
+
+
+
+  </section>
+
+  <!-- work project section starts -->
+  <section class="work" id="projects">
+
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Proyectos <span>Realizados</span></h2>
+    <div class="box-container"> </div>
+
+
+  </section>
+  <!-- work project section ends -->
+
+
+  <!-- contact section starts -->
+  <section class="contact2" id="contact2">
+
+    <h2 class="heading"><i class="fas fa-headset"></i> Póngase En <span>Contacto</span></h2>
+
+    <div class="container">
+      <div class="content">
+        <div class="image-box">
+          <img draggable="false" src="./Assets/images/contact1.png" alt="">
+        </div>
+        <form id="contact-form">
+
+          <div class="form-group">
+            <div class="field">
+              <input type="text" name="name" placeholder="Nombre" required>
+              <i class='fas fa-user'></i>
             </div>
-            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
-        </footer>
+            <div class="field">
+              <input type="email" name="email" placeholder="Correo Electronico" required autocapitalize="off">
+              <i class="fas fa-envelope"></i>
+
+            </div>
+            <div class="field">
+              <input type="number" name="phone" placeholder="Celular">
+              <i class='fas fa-phone-alt'></i>
+            </div>
+
+            <div class="message">
+              <textarea placeholder="Mensaje" name="message" required></textarea>
+              <i class="fas fa-comment-dots"></i>
+            </div>
+
+          </div>
+          <div class="button-area">
+            <button type="submit" id="send">
+              Enviar <i class="fa fa-paper-plane"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- contact section ends -->
 
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- footer section starts -->
+  <section class="footer" id="contact">
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+    <div class="box-container">
+
+      <div class="box">
+        <h3>Edgar's Portfolio</h3>
+        <p>Gracias por visitar mi sitio web. Conéctate conmigo a través de las redes sociales. <br /> <br /> Seguir
+          Creciendo 🚀</p>
+      </div>
+
+      <div class="box">
+        <h3>Enlaces directos</h3>
+        <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+        <a href="#about"><i class="fas fa-chevron-circle-right"></i> Sobre mi</a>
+        <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+
+        <a href="#projects"><i class="fas fa-chevron-circle-right"></i> work</a>
+
+      </div>
+      <!--  -->
+      <div id="contactatlast" class="box">
+        <h3>Informacion de Contacto</h3>
+        <p id="contact-phone"> <i class="fas fa-phone"></i>+57 3113198129</p>
+        <p id="contact-email"> <i class="fas fa-envelope"></i>edgar_duvan_l_r@hotmail.com</p>
+        <p> <i class="fas fa-map-marked-alt"></i>Medellin, Antioquia, Colombia</p>
+        <div class="share">
+
+          <a id="contact-linkedin" href="https://www.linkedin.com/in/shubham-bhati-787319213/" class="fab fa-linkedin"
+            aria-label="LinkedIn" target="_blank"></a>
+          <a id="contact-github" href="https://github.com/EdgarLemus" class="fab fa-github" aria-label="GitHub"
+            target="_blank"></a>
+
+        </div>
+      </div>
+    </div>
+
+    <h1 class="credit">Diseñado </i> por <a href="https://www.linkedin.com/in/edgar-duvan-lemus-ramos-731070136/"> 👨‍💻
+        Edgar Lemus</a></h1>
+    <!-- <i class="fa fa-heart pulse"></i> -->
+  </section>
+  <!-- footer section ends -->
+
+
+  <!-- scroll top btn -->
+  <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+  <!-- scroll back to top -->
+
+
+  <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+  <!-- jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- typed.js cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
+    integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+  <!-- scroll reveal anim -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+  <script src="./Assets/js/script.js"></script>
+
+</body>
+
 </html>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<!-- ==== ESTE PROYECTO ES COPIA DEL PROYECTO DE Shubham Bhati / URL = https://github.com/Shubh2-0/Shubh2-0.github.io.git ==== -->
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
