@@ -1,126 +1,40 @@
 [
-  {
-    "name": "Angular",
-    "icon": "Angular.png"
-  },
-  {
-    "name": "AWS",
-    "icon": "AWS.png"
-  },
-  {
-    "name": "Cucumber",
-    "icon": "Cucumber.png"
-  },
-  {
-    "name": "CSS",
-    "icon": "css.png"
-  },
-  {
-    "name": "Django",
-    "icon": "django.png"
-  },
-  {
-    "name": "Docker",
-    "icon": "Docker.png"
-  },
-  {
-    "name": "Eclipse",
-    "icon": "eclipse.png"
-  },
-  {
-    "name": "Git",
-    "icon": "git.png"
-  },
-  {
-    "name": "Github",
-    "icon": "github.png"
-  },
-  {
-    "name": "Gradle",
-    "icon": "Gradle.png"
-  },
-  {
-    "name": "HTML",
-    "icon": "html.png"
-  },
-  {
-    "name": "IntelliJ",
-    "icon": "intellij.png"
-  },
-  {
-    "name": "Java",
-    "icon": "java.png"
-  },
-  {
-    "name": "JavaScript",
-    "icon": "js.png"
-  },
-  {
-    "name": "JDBC",
-    "icon": "jdbc.png"
-  },
-  {
-    "name": "Jenkins",
-    "icon": "Jenkins.png"
-  },
-  {
-    "name": "Jira",
-    "icon": "Jira.png"
-  },
-  {
-    "name": "Maven",
-    "icon": "maven.png"
-  },
-  {
-    "name": "MongoDB",
-    "icon": "mongoDB.png"
-  },
-  {
-    "name": "MySQL",
-    "icon": "mysql.png"
-  },
-  {
-    "name": "Node Js",
-    "icon": "nodejs.png"
-  },
-  {
-    "name": "Oracle",
-    "icon": "Oracle.png"
-  },
-  {
-    "name": "Php",
-    "icon": "Php.png"
-  },
-  {
-    "name": "Postman",
-    "icon": "postman.png"
-  },
-  {
-    "name": "Python",
-    "icon": "python.png"
-  },
-  {
-    "name": "RESTful - APIs",
-    "icon": "restful.png"
-  },
-  {
-    "name": "Selenium",
-    "icon": "selenium.png"
-  },
-  {
-    "name": "VS Code",
-    "icon": "vscode.png"
-  },
-  {
-    "name": "Zephyr",
-    "icon": "Zephyr.png"
-  },
-  {
-    "name": "Android Studio",
-    "icon": "Android Studio.png"
-  },
-  {
-    "name": "Git",
-    "icon": "git.png"
-  }
+  { "category": "Automatización", "name": "Playwright", "icon": "https://playwright.dev/img/playwright-logo.svg" },
+  { "category": "Automatización", "name": "Selenium", "icon": "selenium.png" },
+  { "category": "Automatización", "name": "Cypress", "icon": "Cypress.png" },
+  { "category": "Automatización", "name": "Appium", "icon": "Appium.png" },
+  { "category": "Automatización", "name": "Serenity BDD & Screenplay", "icon": "SerenityBDD.png" },
+  { "category": "Automatización", "name": "Karate", "icon": "https://github.com/karatelabs.png" },
+  { "category": "Automatización", "name": "Rest Assured", "icon": "https://github.com/rest-assured.png" },
+
+  { "category": "Performance", "name": "JMeter", "icon": "https://cdn.simpleicons.org/apachejmeter/white" },
+  { "category": "Performance", "name": "k6", "icon": "https://cdn.simpleicons.org/k6/white" },
+
+  { "category": "Lenguajes", "name": "Java", "icon": "java.png" },
+  { "category": "Lenguajes", "name": "JavaScript", "icon": "js.png" },
+  { "category": "Lenguajes", "name": "TypeScript", "icon": "https://cdn.simpleicons.org/typescript/white" },
+  { "category": "Lenguajes", "name": "Python", "icon": "python.png" },
+  { "category": "Lenguajes", "name": "Node.js", "icon": "nodejs.png" },
+  { "category": "Lenguajes", "name": "C#", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
+
+  { "category": "Frameworks", "name": "Angular", "icon": "Angular.png" },
+  { "category": "Frameworks", "name": "Django", "icon": "django.png" },
+  { "category": "Frameworks", "name": "Laravel", "icon": "https://cdn.simpleicons.org/laravel/white" },
+  { "category": "Frameworks", "name": "Spring Boot", "icon": "springboot.png" },
+
+  { "category": "Bases de Datos", "name": "Oracle", "icon": "Oracle.png" },
+  { "category": "Bases de Datos", "name": "SQL Server", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" },
+  { "category": "Bases de Datos", "name": "PostgreSQL", "icon": "https://cdn.simpleicons.org/postgresql/white" },
+  { "category": "Bases de Datos", "name": "MySQL", "icon": "mysql.png" },
+  { "category": "Bases de Datos", "name": "MongoDB", "icon": "mongoDB.png" },
+  { "category": "Bases de Datos", "name": "Cassandra", "icon": "https://cdn.simpleicons.org/apachecassandra/white" },
+  { "category": "Bases de Datos", "name": "Sybase", "icon": "https://cdn.simpleicons.org/sap/white" },
+
+  { "category": "DevOps", "name": "Git", "icon": "git.png" },
+  { "category": "DevOps", "name": "GitHub", "icon": "github.png" },
+  { "category": "DevOps", "name": "Bitbucket", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg" },
+  { "category": "DevOps", "name": "Jenkins", "icon": "Jenkins.png" },
+  { "category": "DevOps", "name": "Azure DevOps", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuredevops/azuredevops-original.svg" },
+  { "category": "DevOps", "name": "GitHub Actions", "icon": "https://cdn.simpleicons.org/githubactions/white" },
+  { "category": "DevOps", "name": "GitLab CI", "icon": "https://cdn.simpleicons.org/gitlab/white" }
 ]

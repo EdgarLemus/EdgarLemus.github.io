@@ -470,11 +470,24 @@ header .navbar ul li a:hover {
   margin: auto;
   margin-top: 2rem;
 }
-.skills2 .container .row {
+.skills2 .container .row,
+.skills2 .container .skills-row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   flex-wrap: wrap;
   gap: 1.8rem;
+}
+.skills-category-title {
+  color: #fc8c05;
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-align: left;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.skills-category-title:first-child {
+  margin-top: 0;
 }
 .skills2 .container .bar {
   margin-bottom: 15px;
@@ -511,7 +524,8 @@ header .navbar ul li a:hover {
     padding: 0;
     margin: 0;
   }
-  .skills2 .container .row {
+  .skills2 .container .row,
+  .skills2 .container .skills-row {
     grid-template-columns: repeat(2, 1fr);
     margin: 1rem;
     padding: 2rem 0.2rem 2rem 0.2rem;
@@ -529,7 +543,8 @@ header .navbar ul li a:hover {
     padding: 0;
     margin: 0;
   }
-  .skills2 .container .row {
+  .skills2 .container .row,
+  .skills2 .container .skills-row {
     grid-template-columns: repeat(3, 1fr);
     margin: 1rem;
     padding: 2rem 0.2rem 2rem 0.2rem;
@@ -549,7 +564,8 @@ header .navbar ul li a:hover {
 
     font-size: 19px !important;
   }
-  .skills2 .container .row {
+  .skills2 .container .row,
+  .skills2 .container .skills-row {
     grid-template-columns: repeat(4, 1fr);
     margin: 1rem;
     padding: 2rem 0.2rem 2rem 0.2rem;
@@ -1137,15 +1153,10 @@ form .button-area {
   #contri{
   width: 100%;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
+  display: flex;
+  justify-content: center;
 
   }
-
-#contri2 img{
-  width: 35%;
-  margin-top: 20px;
-}
 
 
 
@@ -1156,18 +1167,9 @@ form .button-area {
   visibility: hidden;
 }
 
-#contri{
-  grid-template-columns: 1fr;
-
-}
-
 #contri img{
-  width: 40%;
+  width: 60%;
 
-}
-#contri2 img{
-  width: 40%;
-  
 }
 
   #heading-git{
@@ -1186,37 +1188,20 @@ form .button-area {
   visibility: hidden;
 
 }
-#contri{
-  grid-template-columns: 1fr;
-}
   #heading-git{
     font-size: 15px;
   }
 #ddd{
   padding-left: 0px;
   }
-#contri img{
-  grid-template-columns: 1fr;
-}
-#contri2 img{
-  width: auto;
-  
-}
 
 
 }
    @media only screen and ( max-width : 1300px) and ( min-width : 800px){
 
-#contri{
-  grid-template-columns: 1fr;
-}
   #heading-git{
     font-size: 15px;
   }
-  #contri2 img{
-  width: auto;
-  
-}
 
   #heading-git{
     font-size: 15px;
@@ -1230,3 +1215,405 @@ form .button-area {
     padding: 0;
     margin: 0;
 }
+
+/* ===================== specialties section starts ===================== */
+.specialties2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.specialties2 h2 {
+  color: #fff;
+}
+.badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  max-width: 110rem;
+  margin: 3rem auto 0;
+}
+.badge-pill {
+  background: rgba(0, 0, 0, 0.652);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  padding: 1.1rem 2rem;
+  border-radius: 5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+.badge-pill i {
+  color: #fc8c05;
+  margin-right: 0.6rem;
+}
+.badge-pill:hover {
+  box-shadow: 0 8px 10px rgba(1, 9, 255, 0.8) !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  transform: translateY(-2px);
+}
+@media only screen and (max-width: 620px) {
+  .badge-pill {
+    font-size: 1.3rem;
+    padding: 0.9rem 1.5rem;
+  }
+}
+/* ===================== specialties section ends ===================== */
+
+/* ===================== AI for QA section starts ===================== */
+.ai-qa2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.ai-qa2 h2 {
+  color: #fff;
+}
+.ai-qa-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: rgba(0, 0, 0, 0.652);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 3rem;
+  width: 90%;
+  margin: 2rem auto 0;
+}
+.ai-qa-text {
+  flex: 1 1 40rem;
+}
+.ai-qa-text p {
+  font-size: 1.6rem;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.ai-qa-list {
+  list-style: none;
+  font-family: "Nunito", sans-serif;
+}
+.ai-qa-list li {
+  font-size: 1.5rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.ai-qa-list li i {
+  color: #fc8c05;
+  margin-right: 1rem;
+}
+.ai-qa-tools {
+  flex: 1 1 35rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-content: start;
+}
+@media only screen and (max-width: 620px) {
+  .ai-qa-container {
+    padding: 1.5rem;
+    width: 100%;
+  }
+  .ai-qa-tools {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+/* ===================== AI for QA section ends ===================== */
+
+/* ===================== experience section starts ===================== */
+.experience2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.experience2 h2 {
+  color: #fff;
+}
+.timeline {
+  max-width: 90rem;
+  margin: 3rem auto 0;
+  position: relative;
+  padding-left: 3rem;
+  border-left: 0.2rem solid #fc8c05;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.timeline-dot {
+  position: absolute;
+  left: -3.85rem;
+  top: 0.4rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #fc8c05;
+  box-shadow: 0 0 0 4px rgba(252, 140, 5, 0.25);
+}
+.timeline-content {
+  background: rgba(0, 0, 0, 0.652);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.timeline-content h3 {
+  font-size: 2.1rem;
+  color: #fff;
+}
+.timeline-company {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fc8c05;
+  margin: 0.4rem 0 1rem;
+  font-family: "Nunito", sans-serif;
+}
+.timeline-date {
+  color: #cfcfcf;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+.timeline-content ul {
+  font-family: "Nunito", sans-serif;
+  padding-left: 1.8rem;
+}
+.timeline-content ul li {
+  font-size: 1.45rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  text-transform: none;
+}
+@media only screen and (max-width: 620px) {
+  .timeline {
+    padding-left: 2rem;
+  }
+  .timeline-dot {
+    left: -2.7rem;
+  }
+  .timeline-content {
+    padding: 1.5rem;
+  }
+}
+/* ===================== experience section ends ===================== */
+
+/* ===================== client projects section starts ===================== */
+.clients2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.clients2 h2 {
+  color: #fff;
+}
+.clients-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  max-width: 120rem;
+  margin: 3rem auto 0;
+}
+.client-card {
+  background: rgba(0, 0, 0, 0.652);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+.client-card:hover {
+  box-shadow: 0 8px 10px rgba(1, 9, 255, 0.8) !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+.client-card h3 {
+  font-size: 1.9rem;
+  color: #fc8c05;
+  margin-bottom: 1rem;
+}
+.client-card ul {
+  list-style: none;
+  font-family: "Nunito", sans-serif;
+}
+.client-card ul li {
+  font-size: 1.4rem;
+  padding: 0.3rem 0;
+  color: #ecedf1;
+}
+.client-card ul li::before {
+  content: "\2022";
+  color: #fc8c05;
+  margin-right: 0.8rem;
+}
+@media only screen and (max-width: 1000px) and (min-width: 620px) {
+  .clients-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 620px) {
+  .clients-container {
+    grid-template-columns: 1fr;
+    margin: 2rem 1rem 0;
+  }
+}
+/* ===================== client projects section ends ===================== */
+
+/* ===================== education section starts ===================== */
+.education2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.education2 h2 {
+  color: #fff;
+}
+.education-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: rgba(0, 0, 0, 0.652);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 3rem;
+  width: 90%;
+  margin: 2rem auto 0;
+}
+.education-list {
+  flex: 2 1 45rem;
+}
+.education-item {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.education-item:last-child {
+  border-bottom: none;
+}
+.education-item h3 {
+  font-size: 1.8rem;
+  color: #fff;
+}
+.education-institution {
+  display: block;
+  font-size: 1.4rem;
+  color: #cfcfcf;
+  font-family: "Nunito", sans-serif;
+  margin-top: 0.3rem;
+}
+.education-status {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #fc8c05;
+  font-weight: 700;
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+}
+.languages-list {
+  flex: 1 1 20rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 2rem;
+}
+.languages-list h3 {
+  font-size: 1.9rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+.languages-list h3 i {
+  color: #fc8c05;
+  margin-right: 0.6rem;
+}
+.language-item {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.language-level {
+  color: #fc8c05;
+  font-weight: 700;
+}
+@media only screen and (max-width: 620px) {
+  .education-container {
+    padding: 1.5rem;
+    width: 100%;
+  }
+  .languages-list {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+  }
+}
+/* ===================== education section ends ===================== */
+
+/* ===================== certificates section starts ===================== */
+.certificates2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+.certificates2 h2 {
+  color: #fff;
+}
+.certificates-intro {
+  color: #cfcfcf;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  max-width: 70rem;
+  margin: 1.5rem auto 0;
+  text-transform: none;
+}
+.certificates-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  max-width: 110rem;
+  margin: 3rem auto 0;
+}
+.certificate-card {
+  display: block;
+  background: rgba(0, 0, 0, 0.652);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+  text-align: center;
+}
+.certificate-card:hover {
+  box-shadow: 0 8px 10px rgba(1, 9, 255, 0.8) !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  transform: translateY(-3px);
+}
+.certificate-card i {
+  font-size: 3.5rem;
+  color: #fc8c05;
+  margin-bottom: 1.2rem;
+}
+.certificate-card h3 {
+  font-size: 1.7rem;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+.certificate-card span {
+  display: block;
+  font-size: 1.3rem;
+  color: #cfcfcf;
+  font-family: "Nunito", sans-serif;
+  text-transform: none;
+}
+@media only screen and (max-width: 1000px) and (min-width: 620px) {
+  .certificates-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 620px) {
+  .certificates-container {
+    grid-template-columns: 1fr;
+    margin: 2rem 1rem 0;
+  }
+}
+/* ===================== certificates section ends ===================== */

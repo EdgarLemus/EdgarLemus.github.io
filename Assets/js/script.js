@@ -44,7 +44,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
   function () {
     if (document.visibilityState === "visible") {
-      document.title = "Portfolio | Edgar Lemus";
+      document.title = "Edgar Lemus | QA Automation Engineer";
       $("#favicon").attr("href", "Assets/images/R.png");
     }
     else {
@@ -56,7 +56,7 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-  strings: ["QA Automation", "Back-End development", "Front-End development", "DevOps Engineering", "Software Architecture"],
+  strings: ["QA Automation Engineer", "Performance Testing", "Mobile & API Testing", "Test Architecture", "IA aplicada a QA"],
   loop: true,
   typeSpeed: 50,
   backSpeed: 25,
@@ -78,16 +78,30 @@ async function fetchData(type = "skills") {
 
 function showSkills(skills) {
   let skillsContainer = document.getElementById("skillsContainer");
-  let skillHTML = "";
+
+  const categories = [];
   skills.forEach(skill => {
-    skillHTML += `
+    const cat = skill.category || "Otros";
+    if (!categories.includes(cat)) categories.push(cat);
+  });
+
+  let skillHTML = "";
+  categories.forEach(category => {
+    skillHTML += `<h3 class="skills-category-title">${category}</h3>`;
+    skillHTML += `<div class="row skills-row">`;
+    skills.filter(skill => (skill.category || "Otros") === category).forEach(skill => {
+      const iconSrc = /^https?:\/\//.test(skill.icon) ? skill.icon : `Assets/images/Skills/${skill.icon}`;
+      skillHTML += `
         <div class="bar">
               <div class="info skills-card">
-                <img class="skills-card-img" src="Assets/images/Skills/${skill.icon}" alt="skill" width="50"/>
+                <img class="skills-card-img" src="${iconSrc}" alt="${skill.name}" width="50" loading="lazy"/>
                 <span class="skills-card-name" >${skill.name}</span>
               </div>
             </div>`
+    });
+    skillHTML += `</div>`;
   });
+
   skillsContainer.innerHTML = skillHTML;
 }
 
