@@ -1566,12 +1566,39 @@ form .button-area {
   margin: 1.5rem auto 0;
   text-transform: none;
 }
+.certificates-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2.5rem 0 0;
+}
+.cert-tab {
+  background: rgba(0, 0, 0, 0.652);
+  color: #cfcfcf;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  padding: 1rem 2.5rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.cert-tab:hover {
+  color: #fff;
+}
+.cert-tab.active {
+  background: #fc8c05;
+  color: #000;
+}
 .certificates-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.8rem;
   max-width: 110rem;
   margin: 3rem auto 0;
+}
+.certificates-container[hidden] {
+  display: none;
 }
 .certificate-card {
   display: block;

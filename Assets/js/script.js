@@ -65,11 +65,12 @@ var typed = new Typed(".typing-text", {
 // <!-- typed js effect ends -->
 
 async function fetchData(type = "skills") {
-  let response
-  type === "skills" ?
-    response = await fetch("skills.json")
-    :
-    response = await fetch("./projects/projects.json")
+  const urls = {
+    skills: "skills.json",
+    projects: "./projects/projects.json",
+    certificates: "certificates.json",
+  };
+  const response = await fetch(urls[type]);
   const data = await response.json();
   return data;
 }
@@ -224,4 +225,29 @@ fetchData().then(data => {
 
 fetchData("projects").then(data => {
   showProjects(data);
+});
+
+function showCertificates(data) {
+  const renderCards = (items) => items.map(item => `
+        <a class="certificate-card" target="_blank" rel="noopener" href="${item.url}">
+          <i class="fas fa-award"></i>
+          <h3>${item.name}</h3>
+          <span>${item.desc || "Curso Platzi"}</span>
+        </a>`).join("");
+
+  document.getElementById("certificatesRutas").innerHTML = renderCards(data.rutas);
+  document.getElementById("certificatesCursos").innerHTML = renderCards(data.cursos);
+
+  document.querySelectorAll(".cert-tab").forEach(tab => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".cert-tab").forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      document.getElementById("certificatesRutas").hidden = tab.dataset.tab !== "rutas";
+      document.getElementById("certificatesCursos").hidden = tab.dataset.tab !== "cursos";
+    });
+  });
+}
+
+fetchData("certificates").then(data => {
+  showCertificates(data);
 });
